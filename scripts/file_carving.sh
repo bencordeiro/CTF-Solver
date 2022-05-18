@@ -1,3 +1,4 @@
+#!/bin/bash
 file $flag_file
 		echo "File Carving / Running Foremost"
 		foremost $flag_file
