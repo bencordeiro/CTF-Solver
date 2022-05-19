@@ -11,3 +11,7 @@ git clone ...
 ```
 # Usage
 ...
+
+
+#Other Resources 
+JohnHammond https://github.com/JohnHammond/katana/tree/master/katana/units
