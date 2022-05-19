@@ -92,7 +92,7 @@ while getopts ":hvdp:f:" option; do
          Help
          exit;;
       v) # Display version
-		 echo "Version 1.0 by Benjamin Cordeiro"
+		 echo "Version 1.2 by Benjamin Cordeiro"
 		 exit;;
       f) # Flag file
 		 flag_file=$OPTARG;;
