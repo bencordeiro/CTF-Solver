@@ -5,9 +5,9 @@ Automatic Capture The Flag solving tool written in bash. This was made to find t
 # Installation
 
 Commands to run script:
-
+```
 git clone ...
-... 
 
+```
 # Usage
 ...
