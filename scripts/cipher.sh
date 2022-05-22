@@ -1,17 +1,15 @@
 #!/bin/bash
-file $flag_file
-		echo "File Carving / Running Foremost"
-		foremost $flag_file
-		chmod -R +rwx output/
-		ZIP=output/zip
-		if [ -d "$ZIP" ]; then
-			echo "$ZIP is a directory."
-			echo "High probability of files hidden inside $flag_file!"
-			echo
-			echo "Please see $(pwd)/$ZIP for more info."
-		fi
-
-#####!/bin/bash could be another script here?
+# file $flag_file
+# 		echo "File Carving / Running Foremost"
+# 		foremost $flag_file
+# 		chmod -R +rwx output/
+# 		ZIP=output/zip
+# 		if [ -d "$ZIP" ]; then
+# 			echo "$ZIP is a directory."
+# 			echo "High probability of files hidden inside $flag_file!"
+# 			echo
+# 			echo "Please see $(pwd)/$ZIP for more info."
+# 		fi
    echo
 		echo "Making a copy and decoding $flag_file with base64."
 		base64 -d $flag_file | tee base64.$flag_file.txt
