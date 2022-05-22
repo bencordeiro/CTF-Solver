@@ -184,11 +184,36 @@ I=y
     [ -n "$var_i" ] && I=$var_i
 
 	if [ $I = y ]; then
-		source scripts/cipher.sh
-		source scripts/file_carving.sh
-		#source scripts/...
-	else
-		echo
-		echo "Goodbye"
-		exit
+	PS3="Please select a sub-script: "
+
+		select opt in file-carve cipher smth quit; do
+
+		case $opt in
+			file-carve)
+			echo "Initiating file-carving"
+			source scripts/file_carving.sh
+			;;
+			cipher)
+			echo "Initiating cipher"
+			echo "under-construction"
+			;;
+			smth)
+			echo "test"
+			;;
+			quit)
+			break
+			;;
+			*) 
+			echo "Invalid option $REPLY"
+			;;
+		esac
+		done
 	fi
+	# 	source scripts/cipher.sh
+	# 	source scripts/file_carving.sh
+	# 	#source scripts/...
+	# else
+	# 	echo
+	# 	echo "Goodbye"
+	# 	exit
+	# fi
