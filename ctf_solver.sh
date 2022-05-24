@@ -186,7 +186,7 @@ I=y
 	if [ $I = y ]; then
 	PS3="Please select a sub-script: "
 
-		select opt in file-carve cipher smth quit; do
+		select opt in file-carve cipher web quit; do
 
 		case $opt in
 			file-carve)
@@ -197,8 +197,9 @@ I=y
 			echo "Initiating cipher"
 			echo "under-construction"
 			;;
-			smth)
-			echo "test"
+			web)
+			echo "Initiating web scripts"
+			source scripts/web.sh
 			;;
 			quit)
 			break
