@@ -6,12 +6,13 @@
 
 func() {
 echo
-    read -p "What is the url?(input)" var_url
     wget -m $var_url
     var_url1=$(echo $var_url | cut -c 8- | rev | cut -c2- | rev)
     grep -R $var_word $var_url
     grep -R $var_word $var_url1
 }
+
+read -p "What is the url?(input)" var_url
 
 #http://saturn.picoctf.net:61941/
 GET=y
