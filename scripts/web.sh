@@ -24,10 +24,14 @@ if [ $GET = y ]; then
 	func
 fi
 ########### Check for robots.txt ###########
-var_bot="robots.txt"
-
-if curl $var_url'/robots.txt' | grep User-agent || curl $var_url$var_bot; then
+var_bot0="robots.txt"
+var_bot1="/robots.txt"
+if curl $var_url$var_bot1 | grep User-agent; then
     echo "You should look in robots.txt"
 else
-    echo "Nothing found in robots.txt"
+    if curl $var_url$varbot0 | grep User-agent; then
+        echo "You should look in robots.txt"
+    else
+        echo  "Nothing found in robots.txt"
+    fi
 fi
