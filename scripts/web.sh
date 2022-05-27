@@ -26,7 +26,7 @@ fi
 ########### Check for robots.txt ###########
 var_bot="robots.txt"
 
-if curl $var_url/robots.txt | grep User-agent || curl $var_url$var_bot; then
+if curl $var_url'/robots.txt' | grep User-agent || curl $var_url$var_bot; then
     echo "You should look in robots.txt"
 else
     echo "Nothing found in robots.txt"
