@@ -23,15 +23,13 @@ if [ $GET = y ]; then
 	read -p "What is the keyword?(input)" var_word
 	func
 fi
+
 ########### Check for robots.txt ###########
 var_bot0="robots.txt"
 var_bot1="/robots.txt"
-if curl $var_url$var_bot1 | grep User-agent; then
-    echo "You should look in robots.txt"
+
+if curl $var_url$var_bot1 | grep User-agent || curl $var_url$var_bot0 | grep User-agent; then
+    echo "( ͡❛ ͜ʖ ͡❛) You should look in robots.txt!"
 else
-    if curl $var_url$varbot0 | grep User-agent; then
-        echo "You should look in robots.txt"
-    else
-        echo  "Nothing found in robots.txt"
-    fi
+    echo  ":-) Nothing found in robots.txt"
 fi
